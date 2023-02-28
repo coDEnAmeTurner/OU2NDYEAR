@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CACPHEPTOAN", "CACPHEPTOAN\CACPHEPTOAN.csproj", "{134A035C-5C3E-4293-B656-6959BC2E2408}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{96B98267-C2BB-426E-9964-F72368FA05ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{134A035C-5C3E-4293-B656-6959BC2E2408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134A035C-5C3E-4293-B656-6959BC2E2408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134A035C-5C3E-4293-B656-6959BC2E2408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134A035C-5C3E-4293-B656-6959BC2E2408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96B98267-C2BB-426E-9964-F72368FA05ED}.Debug|Any CPU.ActiveCfg = Debug
+		{96B98267-C2BB-426E-9964-F72368FA05ED}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50AF0D3A-B585-415D-8C53-D6DE5148B51D}
+	EndGlobalSection
+EndGlobal

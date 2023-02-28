@@ -1,0 +1,6 @@
+Mô tả từng bước kết quả chạy thuật toán Heap Sort với mảng các số nguyên cho dưới đây để sắp xếp mảng sau :
+
+          12      11      9        8        32      17      26
+Cho dãy số ban đầu như sau : 17  72  99  32  58  70  44  12  23  
+
+Hãy trình bày các bước sắp xếp dãy trên bằng Quick Sort

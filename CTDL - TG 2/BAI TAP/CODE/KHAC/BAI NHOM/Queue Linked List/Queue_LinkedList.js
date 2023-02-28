@@ -1,0 +1,88 @@
+class Node {
+    constructor (_value)
+    {
+        this.value = _value;
+        this.next = null;
+    }
+}
+
+class Queue {
+    #front;
+    #rear;
+
+    constructor() {
+        this.#front = null;
+        this.#rear = null;
+    }
+    enQueue(_value){
+        if (this.empty())
+        {
+            let newNode = new Node(_value);
+            this.#front = newNode;
+            this.#rear = newNode;
+            
+        }
+        else {
+            this.#rear.next = new Node(_value);
+            this.#rear = this.#rear.next;
+        }
+    };
+    deQueue(){
+        if (this.empty() == false)
+        {
+            if (this.#front == this.#rear)
+            {
+                this.#front = null;
+                this.#rear = null;
+                return;  
+            }
+            this.#front = this.#front.next;
+
+        }
+    };
+    empty(){
+        if (this.#front == null && this.#rear == null)
+            return true;
+        return false;
+    };
+    peek(){
+        if (this.empty() == false)
+            return this.#front.value;
+    };
+    print()
+    {
+        if (this.empty() == false)
+        {
+            let tmp = this.#front;
+            while (tmp != null)
+            {
+                console.log(tmp.value);
+                tmp = tmp.next;
+            }
+        }
+    }
+}
+
+//main function ver JS
+window.addEventListener("load", () => {
+    let q = new Queue();
+    let n = 1000;
+    let start = performance.now();
+    for (let i = 0; i < n; i++)
+        q.enQueue(i);
+    let end = performance.now();
+    q.print();
+    console.log("enqueue time: " + (end - start) + "ms");
+
+    start = performance.now();
+    let val = q.peek();
+    end = performance.now();
+    console.log("front of queue: " + val);
+    console.log("peek time: " + (end - start) + "ms");
+
+    start = performance.now();
+    while (q.empty() == false)
+        q.deQueue();
+    end = performance.now();
+    console.log("dequeue time: " + (end - start) + "ms");
+})
