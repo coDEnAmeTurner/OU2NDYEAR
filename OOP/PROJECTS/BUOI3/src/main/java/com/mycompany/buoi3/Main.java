@@ -9,9 +9,9 @@ package com.mycompany.buoi3;
  * @author Admin
  */
 public class Main {
-    public static void main(String[] args) {
-        Diem d1 = new Diem(1, 2);
-        Diem d2 = new Diem(3, 4);    
-        
+    public static void main(String[] args) throws Exception {
+        HinhChuNhat hcn = new HinhChuNhat(new Diem(1, 5), new Diem(7, 3));
+
+        hcn.hienThiTatCa();
     }
 }

@@ -37,6 +37,22 @@ public class DoanThang {
     
     public void hienThi()
     {
-        System.out.printf("[(), ()]");
+        System.out.printf("[(%1.1f, %1.1f), (%1.1f, %1.1f)]", d1.getX(), d1.getY(), d2.getX(), d2.getY());
+    }
+    public double tinhDoDai()
+    {
+        return d1.tinhKhoangCach(d2);
+    }
+    public Diem timTrungDiem() 
+    {
+        return new Diem((d1.getX() + d2.getX()) / 2, (d1.getY() + d2.getY()) / 2);
+    }
+    public boolean isSongSong (DoanThang doan1)
+    {
+        double veTrai = (d1.getX() - d2.getX()) * (doan1.d1.getY() - doan1.d2.getY());
+        double vePhai = (d1.getY() - d2.getY()) * (doan1.d1.getX() - doan1.d2.getX());
+        double e = 0.00000001;
+        
+        return Math.abs(veTrai - vePhai) < e;
     }
 }
