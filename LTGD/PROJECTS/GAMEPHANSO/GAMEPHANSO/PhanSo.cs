@@ -41,31 +41,50 @@ namespace GAMEPHANSO
             mauSo /= ucln;
         }
 
-        public PhanSo cong(PhanSo phanso1)
+        public static PhanSo cong(PhanSo phanso, PhanSo phanso1)
         {
-            var kq = new PhanSo(tuSo * phanso1.mauSo + mauSo * phanso1.tuSo, mauSo * phanso1.mauSo);
+            var kq = new PhanSo(phanso.tuSo * phanso1.mauSo + phanso.mauSo * phanso1.tuSo, phanso.mauSo * phanso1.mauSo);
             kq.toiGian();
             return kq;
         }
 
-        public PhanSo nhan(PhanSo phanso1)
+        public static PhanSo nhan(PhanSo phanso, PhanSo phanso1)
         {
-            var kq = new PhanSo(tuSo * phanso1.tuSo, mauSo * phanso1.mauSo); kq.toiGian();
+            var kq = new PhanSo(phanso.tuSo * phanso1.tuSo, phanso.mauSo * phanso1.mauSo); kq.toiGian();
             return kq;
         }
 
-        public PhanSo tru(PhanSo phanso1)
+        public static PhanSo tru(PhanSo phanso, PhanSo phanso1)
         {
-            var kq = new PhanSo(tuSo * phanso1.mauSo - mauSo * phanso1.tuSo, mauSo * phanso1.mauSo);
+            var kq = new PhanSo(phanso.tuSo * phanso1.mauSo - phanso.mauSo * phanso1.tuSo, phanso.mauSo * phanso1.mauSo);
             kq.toiGian();
             return kq;
         }
 
-        public PhanSo chia(PhanSo phanso1)
+        public static PhanSo chia(PhanSo phanso, PhanSo phanso1)
         {
-            var kq = nhan(new PhanSo(phanso1.mauSo, phanso1.tuSo));
+            var kq = PhanSo.nhan(phanso, new PhanSo(phanso1.mauSo, phanso1.tuSo));
             kq.toiGian();
             return kq;
+        }
+
+        public static bool isBang(PhanSo phanso, PhanSo phanso1)
+        {
+            try
+            {
+
+                phanso.toiGian();
+                phanso1.toiGian();
+                //khong catch NullReferenceException dc
+
+                return phanso.tuSo == phanso1.tuSo && phanso.mauSo == phanso1.mauSo;
+
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Chua nhap phan so");
+                return false;
+            }
         }
     }
 }
