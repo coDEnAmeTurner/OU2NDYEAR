@@ -70,21 +70,10 @@ namespace GAMEPHANSO
 
         public static bool isBang(PhanSo phanso, PhanSo phanso1)
         {
-            try
-            {
-
-                phanso.toiGian();
+               phanso.toiGian();
                 phanso1.toiGian();
-                //khong catch NullReferenceException dc
 
                 return phanso.tuSo == phanso1.tuSo && phanso.mauSo == phanso1.mauSo;
-
-            }
-            catch (NullReferenceException)
-            {
-                MessageBox.Show("Chua nhap phan so");
-                return false;
-            }
         }
     }
 }

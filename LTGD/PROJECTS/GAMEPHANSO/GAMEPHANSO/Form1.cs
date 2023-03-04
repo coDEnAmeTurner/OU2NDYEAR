@@ -58,7 +58,8 @@ namespace GAMEPHANSO
         private void buttonCheck_Click(object sender, EventArgs e)
         {
             try {
-                if (PhanSo.isBang(kq, new PhanSo(int.Parse(textBoxTu3.Text), int.Parse(textBoxMau3.Text))))
+                if (PhanSo.isBang(new PhanSo(kq.TuSo, kq.MauSo), new PhanSo(int.Parse(textBoxTu3.Text), int.Parse(textBoxMau3.Text))))
+                //khong catch NullReferenceException dc
                 {
                     labelKetQua.ForeColor = Color.Green;
                     labelKetQua.Text = "Correct";
@@ -70,7 +71,11 @@ namespace GAMEPHANSO
                     labelKetQua.Text = "Incorrect";
                 }
             }
-            
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Chua bam Random");
+
+            }
             catch (FormatException)
             {
                 MessageBox.Show("Chua nhap ket qua hoac nhap sai data type");

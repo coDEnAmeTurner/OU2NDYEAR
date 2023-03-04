@@ -8,6 +8,7 @@ package com.mycompany.buoi3;
  *
  * @author Admin
  */
+
 public class HinhTron {
     private Diem tamDiem;
     private double banKinh;
@@ -57,17 +58,39 @@ public class HinhTron {
         return banKinh * 2 * Math.PI;
     }
     
-    public void timViTriTuongDoi(Diem a)
+    public RelativePosPointToCircum timViTriTuongDoiDiem (Diem a)
     {
         double kcDenTam = tamDiem.tinhKhoangCach(a);
         double e = 0.00000001;
+        if (Math.abs(kcDenTam - 0) < e) {
+            return RelativePosPointToCircum.TRUNGTAM;
+        }
+        
         if (Math.abs(kcDenTam - banKinh) < e)
-            System.out.println("Diem nam tren duoung tron");
+            return RelativePosPointToCircum.TREN;
         else if (kcDenTam - banKinh < 0)
-            System.out.println("Diem nam trong duong tron");
+            return RelativePosPointToCircum.TRONG;
         else
-            System.out.println("Diem nam ngoai duong tron");
-            
+            return RelativePosPointToCircum.NGOAI;
+    }
+    
+    public RelativePosCircumToCircum timViTriTuongDoiDTron (HinhTron h1)
+    {
+        double e = 0.00000001;
+        double kcHaiTam = tamDiem.tinhKhoangCach(h1.tamDiem);
+        if (Math.abs(kcHaiTam - 0) < e)
+            return RelativePosCircumToCircum.DONGTAM;
+        else if (kcHaiTam < banKinh + h1.banKinh && kcHaiTam > Math.abs(banKinh - h1.banKinh))
+            return RelativePosCircumToCircum.CAT;
+        else if (Math.abs(kcHaiTam - Math.abs(banKinh - h1.banKinh)) < e)
+            return RelativePosCircumToCircum.TIEPXUCTRONG;
+        else if (Math.abs(kcHaiTam - banKinh - h1.banKinh) < e)
+            return RelativePosCircumToCircum.TIEPXUCNGOAI;
+        else if (kcHaiTam > banKinh + h1.banKinh)
+            return RelativePosCircumToCircum.NGOAINHAU;
+        else if (kcHaiTam < Math.abs(banKinh - h1.banKinh))
+            return RelativePosCircumToCircum.TRONGNHAU;
+        else return null;
     }
     
 }
