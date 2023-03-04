@@ -8,6 +8,6 @@ namespace PHEPTOANTAMGIAC
 {
 	enum TamGiacType
 	{
-		thuong, can, vuongCan, deu
+		THUONG, CAN, DEU, VUONG
 	}
 }
