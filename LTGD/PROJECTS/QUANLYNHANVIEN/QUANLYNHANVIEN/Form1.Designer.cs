@@ -50,7 +50,7 @@
             this.buttonDangNhap.Location = new System.Drawing.Point(90, 138);
             this.buttonDangNhap.Name = "buttonDangNhap";
             this.buttonDangNhap.Size = new System.Drawing.Size(112, 23);
-            this.buttonDangNhap.TabIndex = 1;
+            this.buttonDangNhap.TabIndex = 2;
             this.buttonDangNhap.Text = "Đăng nhập";
             this.buttonDangNhap.UseVisualStyleBackColor = true;
             this.buttonDangNhap.Click += new System.EventHandler(this.buttonDangNhap_Click);
@@ -79,7 +79,7 @@
             this.richTextBoxMatKhau.Multiline = false;
             this.richTextBoxMatKhau.Name = "richTextBoxMatKhau";
             this.richTextBoxMatKhau.Size = new System.Drawing.Size(217, 23);
-            this.richTextBoxMatKhau.TabIndex = 3;
+            this.richTextBoxMatKhau.TabIndex = 1;
             this.richTextBoxMatKhau.Text = "";
             // 
             // buttonDong
@@ -87,7 +87,7 @@
             this.buttonDong.Location = new System.Drawing.Point(251, 138);
             this.buttonDong.Name = "buttonDong";
             this.buttonDong.Size = new System.Drawing.Size(112, 23);
-            this.buttonDong.TabIndex = 5;
+            this.buttonDong.TabIndex = 3;
             this.buttonDong.Text = "Đóng";
             this.buttonDong.UseVisualStyleBackColor = true;
             this.buttonDong.Click += new System.EventHandler(this.buttonDong_Click);

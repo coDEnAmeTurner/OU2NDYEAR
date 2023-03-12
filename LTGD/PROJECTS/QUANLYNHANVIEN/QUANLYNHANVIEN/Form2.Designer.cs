@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBoxTen = new System.Windows.Forms.RichTextBox();
             this.buttonThem = new System.Windows.Forms.Button();
             this.radioButtonNam = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButtonNu = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.listViewDanhSach = new System.Windows.Forms.ListView();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTmPckrNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.radioButtonNu = new System.Windows.Forms.RadioButton();
             this.buttonXoa = new System.Windows.Forms.Button();
             this.labelTenDangNhap = new System.Windows.Forms.Label();
+            this.timerFade = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +70,7 @@
             this.buttonThem.TabIndex = 2;
             this.buttonThem.Text = "Thêm";
             this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // radioButtonNam
             // 
@@ -90,6 +93,16 @@
             this.panel1.Size = new System.Drawing.Size(196, 35);
             this.panel1.TabIndex = 5;
             // 
+            // radioButtonNu
+            // 
+            this.radioButtonNu.AutoSize = true;
+            this.radioButtonNu.Location = new System.Drawing.Point(118, 3);
+            this.radioButtonNu.Name = "radioButtonNu";
+            this.radioButtonNu.Size = new System.Drawing.Size(41, 19);
+            this.radioButtonNu.TabIndex = 5;
+            this.radioButtonNu.Text = "Nữ";
+            this.radioButtonNu.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -109,6 +122,7 @@
             this.listViewDanhSach.Size = new System.Drawing.Size(423, 221);
             this.listViewDanhSach.TabIndex = 7;
             this.listViewDanhSach.UseCompatibleStateImageBehavior = false;
+            this.listViewDanhSach.View = System.Windows.Forms.View.Details;
             // 
             // label3
             // 
@@ -122,20 +136,12 @@
             // dateTmPckrNgaySinh
             // 
             this.dateTmPckrNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dateTmPckrNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTmPckrNgaySinh.Location = new System.Drawing.Point(104, 159);
             this.dateTmPckrNgaySinh.Name = "dateTmPckrNgaySinh";
             this.dateTmPckrNgaySinh.Size = new System.Drawing.Size(225, 23);
             this.dateTmPckrNgaySinh.TabIndex = 9;
-            // 
-            // radioButtonNu
-            // 
-            this.radioButtonNu.AutoSize = true;
-            this.radioButtonNu.Location = new System.Drawing.Point(118, 3);
-            this.radioButtonNu.Name = "radioButtonNu";
-            this.radioButtonNu.Size = new System.Drawing.Size(41, 19);
-            this.radioButtonNu.TabIndex = 5;
-            this.radioButtonNu.Text = "Nữ";
-            this.radioButtonNu.UseVisualStyleBackColor = true;
+            this.dateTmPckrNgaySinh.Value = new System.DateTime(2023, 3, 11, 20, 32, 6, 0);
             // 
             // buttonXoa
             // 
@@ -145,6 +151,7 @@
             this.buttonXoa.TabIndex = 10;
             this.buttonXoa.Text = "Xoá";
             this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // labelTenDangNhap
             // 
@@ -154,6 +161,11 @@
             this.labelTenDangNhap.Size = new System.Drawing.Size(317, 32);
             this.labelTenDangNhap.TabIndex = 11;
             this.labelTenDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timerFade
+            // 
+            this.timerFade.Interval = 1000;
+            this.timerFade.Tick += new System.EventHandler(this.timerFade_Tick);
             // 
             // Form2
             // 
@@ -172,6 +184,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -193,6 +206,6 @@
         private DateTimePicker dateTmPckrNgaySinh;
         private Button buttonXoa;
         private Label labelTenDangNhap;
-
+        private System.Windows.Forms.Timer timerFade;
     }
 }
