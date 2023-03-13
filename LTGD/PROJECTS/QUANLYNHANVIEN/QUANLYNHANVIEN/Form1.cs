@@ -1,3 +1,6 @@
+﻿using System;
+using System.Windows.Forms;
+
 namespace QUANLYNHANVIEN
 {
     public partial class Form1 : Form
@@ -16,7 +19,7 @@ namespace QUANLYNHANVIEN
 
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
-            if(richTextBoxTen.Text == "" || richTextBoxMatKhau.Text != "admin")
+            if (richTextBoxTen.Text == "" || textBoxMatKhau.Text != "admin")
                 this.Close();
             else
             {
@@ -25,6 +28,8 @@ namespace QUANLYNHANVIEN
                 this.Hide();
                 form2.Show();
             }
+
+            
         }
     }
 }

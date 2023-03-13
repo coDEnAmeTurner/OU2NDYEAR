@@ -29,6 +29,7 @@ namespace QUANLYNHANVIEN
         private void buttonThem_Click(object sender, EventArgs e)
         {
             ListViewItem hang = new ListViewItem(richTextBoxTen.Text);
+            hang.ImageIndex = radioButtonNam.Checked ? 0 : 1;
             hang.SubItems.Add(dateTmPckrNgaySinh.Value.ToShortDateString());
             hang.SubItems.Add(radioButtonNam.Checked ? radioButtonNam.Text : radioButtonNu.Text);
             listViewDanhSach.Items.Add(hang);
@@ -48,13 +49,15 @@ namespace QUANLYNHANVIEN
             {
                 timerFade.Enabled = true;
                 timerFade.Start();
+                e.Cancel = true;
             }
         }
 
         private void timerFade_Tick(object sender, EventArgs e)
         {
-            this.Opacity -= 0.1 ;
-            if (this.Opacity <= 0) {
+            this.Opacity -= 0.1;
+            if (this.Opacity <= 0)
+            {
                 this.Close();
                 Form1.thisForm.Close();
             }
