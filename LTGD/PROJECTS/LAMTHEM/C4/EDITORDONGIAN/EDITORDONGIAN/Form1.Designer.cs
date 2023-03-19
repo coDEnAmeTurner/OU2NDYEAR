@@ -34,13 +34,13 @@
             this.cmbBxSize = new System.Windows.Forms.ComboBox();
             this.buttonB = new System.Windows.Forms.Button();
             this.panelResultColor = new System.Windows.Forms.Panel();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.hScrollBarRed = new System.Windows.Forms.HScrollBar();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonSlash = new System.Windows.Forms.Button();
             this.buttonU = new System.Windows.Forms.Button();
-            this.hScrollBar2 = new System.Windows.Forms.HScrollBar();
-            this.hScrollBar3 = new System.Windows.Forms.HScrollBar();
+            this.hScrollBarGreen = new System.Windows.Forms.HScrollBar();
+            this.hScrollBarBlue = new System.Windows.Forms.HScrollBar();
             this.panelRed = new System.Windows.Forms.Panel();
             this.panelGreen = new System.Windows.Forms.Panel();
             this.panelBlue = new System.Windows.Forms.Panel();
@@ -73,6 +73,7 @@
             this.rchTxtBxContent.Size = new System.Drawing.Size(319, 364);
             this.rchTxtBxContent.TabIndex = 2;
             this.rchTxtBxContent.Text = "";
+            this.rchTxtBxContent.MouseUp += new System.Windows.Forms.MouseEventHandler(this.rchTxtBxContent_MouseUp);
             // 
             // cmbBxSize
             // 
@@ -100,12 +101,12 @@
             this.panelResultColor.Size = new System.Drawing.Size(76, 60);
             this.panelResultColor.TabIndex = 5;
             // 
-            // hScrollBar1
+            // hScrollBarRed
             // 
-            this.hScrollBar1.Location = new System.Drawing.Point(272, 412);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(203, 20);
-            this.hScrollBar1.TabIndex = 0;
+            this.hScrollBarRed.Location = new System.Drawing.Point(272, 412);
+            this.hScrollBarRed.Name = "hScrollBarRed";
+            this.hScrollBarRed.Size = new System.Drawing.Size(203, 20);
+            this.hScrollBarRed.TabIndex = 0;
             // 
             // label2
             // 
@@ -147,19 +148,19 @@
             this.buttonU.UseVisualStyleBackColor = true;
             this.buttonU.Click += new System.EventHandler(this.buttonU_Click);
             // 
-            // hScrollBar2
+            // hScrollBarGreen
             // 
-            this.hScrollBar2.Location = new System.Drawing.Point(272, 432);
-            this.hScrollBar2.Name = "hScrollBar2";
-            this.hScrollBar2.Size = new System.Drawing.Size(203, 20);
-            this.hScrollBar2.TabIndex = 10;
+            this.hScrollBarGreen.Location = new System.Drawing.Point(272, 432);
+            this.hScrollBarGreen.Name = "hScrollBarGreen";
+            this.hScrollBarGreen.Size = new System.Drawing.Size(203, 20);
+            this.hScrollBarGreen.TabIndex = 10;
             // 
-            // hScrollBar3
+            // hScrollBarBlue
             // 
-            this.hScrollBar3.Location = new System.Drawing.Point(272, 452);
-            this.hScrollBar3.Name = "hScrollBar3";
-            this.hScrollBar3.Size = new System.Drawing.Size(203, 20);
-            this.hScrollBar3.TabIndex = 11;
+            this.hScrollBarBlue.Location = new System.Drawing.Point(272, 452);
+            this.hScrollBarBlue.Name = "hScrollBarBlue";
+            this.hScrollBarBlue.Size = new System.Drawing.Size(203, 20);
+            this.hScrollBarBlue.TabIndex = 11;
             // 
             // panelRed
             // 
@@ -193,13 +194,13 @@
             this.Controls.Add(this.panelGreen);
             this.Controls.Add(this.panelBlue);
             this.Controls.Add(this.panelRed);
-            this.Controls.Add(this.hScrollBar3);
-            this.Controls.Add(this.hScrollBar2);
+            this.Controls.Add(this.hScrollBarBlue);
+            this.Controls.Add(this.hScrollBarGreen);
             this.Controls.Add(this.buttonU);
             this.Controls.Add(this.buttonSlash);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.hScrollBar1);
+            this.Controls.Add(this.hScrollBarRed);
             this.Controls.Add(this.panelResultColor);
             this.Controls.Add(this.buttonB);
             this.Controls.Add(this.cmbBxSize);
@@ -221,13 +222,13 @@
         private ComboBox cmbBxSize;
         private Button buttonB;
         private Panel panelResultColor;
-        private HScrollBar hScrollBar1;
+        private HScrollBar hScrollBarRed;
         private Label label2;
         private Label label3;
         private Button buttonSlash;
         private Button buttonU;
-        private HScrollBar hScrollBar2;
-        private HScrollBar hScrollBar3;
+        private HScrollBar hScrollBarGreen;
+        private HScrollBar hScrollBarBlue;
         private Panel panelRed;
         private Panel panelGreen;
         private Panel panelBlue;

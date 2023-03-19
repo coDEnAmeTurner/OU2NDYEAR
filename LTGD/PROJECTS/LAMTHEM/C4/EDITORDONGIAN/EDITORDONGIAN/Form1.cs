@@ -42,5 +42,13 @@ namespace EDITORDONGIAN
             rchTxtBxContent.SelectionFont = new Font(rchTxtBxContent.SelectionFont.FontFamily,
                 rchTxtBxContent.SelectionFont.Size, rchTxtBxContent.SelectionFont.Style ^ FontStyle.Underline);
         }
+
+        private void rchTxtBxContent_MouseUp(object sender, MouseEventArgs e)
+        {
+            var thisRichTxtBx = sender as RichTextBox;
+            hScrollBarRed.Value = thisRichTxtBx.SelectionColor.R;
+            hScrollBarGreen.Value = thisRichTxtBx.SelectionColor.G;
+            hScrollBarBlue.Value = thisRichTxtBx.SelectionColor.B;
+        }
     }
 }
