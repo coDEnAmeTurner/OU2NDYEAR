@@ -5,10 +5,7 @@
 package com.mycompany.buoi5;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
-import java.util.Scanner;
 
 /**
  *
@@ -20,8 +17,7 @@ public class HocVien {
     private Date ngaySinh;
     private double[] diem;
     public static int count = 0;
-    public static final SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
-    private static final Scanner sc = new Scanner(System.in);
+
 
     public HocVien() {
     }
@@ -34,7 +30,7 @@ public class HocVien {
     }
     
     public HocVien(int ma, String hoTen, String ngaySinh) throws ParseException {
-        this(ma, hoTen, f.parse(ngaySinh));
+        this(ma, hoTen, Utility.f.parse(ngaySinh));
     }
 
     /**
@@ -95,13 +91,14 @@ public class HocVien {
 
     public void hienThi() {
         System.out.printf("Ho ten: %s\n", hoTen);
-        System.out.printf("Ngay sinh: %s\n", f.format(ngaySinh));
-        for (int i = 0; i < diem.length; i++) 
-            System.out.printf("Diem mon %d: %1.1f\n", i, diem[i]);
+        System.out.printf("Ngay sinh: %s\n", Utility.f.format(ngaySinh));
+//        for (int i = 0; i < diem.length; i++) 
+//            System.out.printf("Diem mon %d: %1.1f\n", i, diem[i]);
     }
     
     public void nhapHV() throws ParseException {
-        System.out.print("Nhap ho ten: "); hoTen = sc.nextLine();
-        System.out.print("Nhap ngay sinh: "); ngaySinh = f.parse(sc.nextLine());
+        System.out.print("Nhap ho ten: "); hoTen = Utility.sc.nextLine();
+        System.out.print("Nhap ngay sinh: "); ngaySinh = Utility.f.parse(Utility.sc.nextLine());
     }
+    
 }
