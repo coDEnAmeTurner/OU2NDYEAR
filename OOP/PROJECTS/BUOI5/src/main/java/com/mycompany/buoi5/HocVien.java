@@ -5,6 +5,7 @@
 package com.mycompany.buoi5;
 
 import java.text.ParseException;
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -12,12 +13,12 @@ import java.util.Date;
  * @author Admin
  */
 public class HocVien {
+    private static final int soMon = 3;
     private int ma;
     private String hoTen;
     private Date ngaySinh;
-    private double[] diem;
+    private double[] diem = new double[soMon];
     public static int count = 0;
-
 
     public HocVien() {
     }
@@ -101,4 +102,14 @@ public class HocVien {
         System.out.print("Nhap ngay sinh: "); ngaySinh = Utility.f.parse(Utility.sc.nextLine());
     }
     
+    public void nhapDiem() {
+        for (int i = 0; i < soMon; i++) {
+            System.out.printf("Nhap diem %d: ", i); 
+            diem[i] = Utility.sc.nextDouble();
+        }
+    }
+    
+    public double tinhTrungBinh() {
+        return Arrays.stream(diem).average().getAsDouble();
+    }
 }

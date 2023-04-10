@@ -1,0 +1,3 @@
+Ma hoc vien: 0 
+Ten hoc vien: Tran Luu Quoc Tuan 
+Diem trung binh hoc vien: 10.0 

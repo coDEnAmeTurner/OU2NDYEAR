@@ -65,6 +65,7 @@
             this.lstBxFontList.Name = "lstBxFontList";
             this.lstBxFontList.Size = new System.Drawing.Size(206, 361);
             this.lstBxFontList.TabIndex = 1;
+            this.lstBxFontList.SelectedIndexChanged += new System.EventHandler(this.lstBxFontList_SelectedIndexChanged);
             // 
             // rchTxtBxContent
             // 
@@ -104,9 +105,11 @@
             // hScrollBarRed
             // 
             this.hScrollBarRed.Location = new System.Drawing.Point(272, 412);
+            this.hScrollBarRed.Maximum = 255;
             this.hScrollBarRed.Name = "hScrollBarRed";
             this.hScrollBarRed.Size = new System.Drawing.Size(203, 20);
             this.hScrollBarRed.TabIndex = 0;
+            this.hScrollBarRed.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarRed_Scroll);
             // 
             // label2
             // 
@@ -151,16 +154,20 @@
             // hScrollBarGreen
             // 
             this.hScrollBarGreen.Location = new System.Drawing.Point(272, 432);
+            this.hScrollBarGreen.Maximum = 255;
             this.hScrollBarGreen.Name = "hScrollBarGreen";
             this.hScrollBarGreen.Size = new System.Drawing.Size(203, 20);
             this.hScrollBarGreen.TabIndex = 10;
+            this.hScrollBarGreen.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarGreen_Scroll);
             // 
             // hScrollBarBlue
             // 
             this.hScrollBarBlue.Location = new System.Drawing.Point(272, 452);
+            this.hScrollBarBlue.Maximum = 255;
             this.hScrollBarBlue.Name = "hScrollBarBlue";
             this.hScrollBarBlue.Size = new System.Drawing.Size(203, 20);
             this.hScrollBarBlue.TabIndex = 11;
+            this.hScrollBarBlue.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarBlue_Scroll);
             // 
             // panelRed
             // 
