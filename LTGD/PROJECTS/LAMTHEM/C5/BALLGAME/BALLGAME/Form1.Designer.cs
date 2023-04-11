@@ -33,8 +33,6 @@
             this.picBoxBall = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.thanhNgang = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxBall)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,36 +60,18 @@
             this.thanhNgang.Size = new System.Drawing.Size(111, 32);
             this.thanhNgang.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(562, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 291);
-            this.label1.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(209, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.thanhNgang);
             this.Controls.Add(this.picBoxBall);
             this.Name = "Form1";
             this.Text = "Ball";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxBall)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -100,7 +80,5 @@
         private PictureBox picBoxBall;
         private System.Windows.Forms.Timer timer1;
         private Panel thanhNgang;
-        private Label label1;
-        private TextBox textBox1;
     }
 }
