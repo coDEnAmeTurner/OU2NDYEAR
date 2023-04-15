@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "QUANLYSINHVIEN/1.0.0": {
+        "runtime": {
+          "QUANLYSINHVIEN.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "QUANLYSINHVIEN/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

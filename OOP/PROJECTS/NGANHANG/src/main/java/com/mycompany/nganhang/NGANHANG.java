@@ -5,6 +5,10 @@
 
 package com.mycompany.nganhang;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 /**
  *
  * @author Admin
@@ -12,6 +16,7 @@ package com.mycompany.nganhang;
 public class NGANHANG {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        List<NhanVien> dsNV = new ArrayList<>();
+        dsNV.sort(Comparator.comparing(NhanVien::getTen));
     }
 }
