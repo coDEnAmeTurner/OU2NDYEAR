@@ -6,11 +6,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-//Thay đổi cấu trúc uml:
-//Sửa hienThi() của mỗi dịch vụ
-//Bỏ cập nhật trong quanlyanuong, chuyển cho DoAnUong, thiết kế capNhat theo polymorphism
-//Thêm tracuuanuong bằng tên
-//Thêm enum thoidiemhthue, vitrisanh
 public class Demo {
     public static void main(String[] args) throws ParseException {
         int choose;
@@ -37,9 +32,10 @@ public class Demo {
             System.out.println("0. Thoát");
             System.out.println("==========================================");
             System.out.print("Nhập sự lựa chọn: ");
-            choose = CauHinh.sc.nextInt();
+            choose = Integer.parseInt(CauHinh.sc.nextLine()) ;
             switch(choose){
                 case 1:
+                    int choose1;
                     do{
                         System.out.println("\n\n1. Thêm sảnh cưới");
                         System.out.println("2. Cập nhật thông tin sảnh cưới");
@@ -52,8 +48,8 @@ public class Demo {
                         System.out.println("9. Hiển thị tên sảnh và tần số tương ứng");
                         System.out.println("0. Thoát");
                         System.out.print("\nNhập sự lựa chọn: ");
-                        choose = CauHinh.sc.nextInt();
-                        switch(choose) {
+                        choose1 = CauHinh.sc.nextInt();
+                        switch(choose1) {
                             case 1: {
                                 System.out.print("Nhập tên sảnh: ");
                                 String ten = CauHinh.sc.nextLine();
@@ -128,15 +124,16 @@ public class Demo {
                                 qlySanhCuoi.hienThiTheoTanSo();
                                 break;
                             case 0:
-                                choose = 0;
+                                choose1 = 0;
                                 break;
                             default:
                                 System.out.println("Không có lựa chọn này!");
                                 break;
                         }
-                    }while(choose != 0);
+                    }while(choose1 != 0);
                     break;
                 case 2:
+                    int choose2;
                     do{
                         System.out.println("\n\n1. Thêm dịch vụ");
                         System.out.println("2. Cập nhật dịch vụ");
@@ -145,8 +142,8 @@ public class Demo {
                         System.out.println("5. Hiển thị tất cả dịch vụ");
                         System.out.println("0. Thoát");
                         System.out.print("\nNhập sự lựa chọn: ");
-                        choose = Integer.parseInt(CauHinh.sc.nextLine()) ;
-                        switch(choose) {
+                        choose2 = Integer.parseInt(CauHinh.sc.nextLine()) ;
+                        switch(choose2) {
                             case 1: {
                                 int option;
                                 do {
@@ -222,15 +219,16 @@ public class Demo {
                                 break;
                             }
                             case 0:
-                                choose = 0;
+                                choose2 = 0;
                                 break;
                             default:
                                 System.out.println("Không có lựa chọn này!");
                                 break;
                         }
-                    }while(choose != 0);
+                    }while(choose2 != 0);
                     break;
                 case 3:
+                    int choose3;
                     do{
                         System.out.println("\n\n1. Thêm đồ ăn uống");
                         System.out.println("2. Cập nhật đồ ăn uống");
@@ -239,8 +237,8 @@ public class Demo {
                         System.out.println("5. Hiển thị tất cả đồ ăn uống");
                         System.out.println("0. Thoát");
                         System.out.print("\nNhập sự lựa chọn: ");
-                        choose = Integer.parseInt(CauHinh.sc.nextLine()) ;
-                        switch(choose) {
+                        choose3 = Integer.parseInt(CauHinh.sc.nextLine()) ;
+                        switch(choose3) {
                             case 1: {
                                 int option;
                                 do {
@@ -305,21 +303,22 @@ public class Demo {
                                 break;
                             }
                             case 0:
-                                choose = 0;
+                                choose3 = 0;
                                 break;
                             default:
                                 System.out.println("Không có lựa chọn này!");
                                 break;
                         }
-                    }while(choose != 0);
+                    }while(choose3 != 0);
                     break;
                 case 4:
+                    int choose4;
                     do{
                         System.out.println("\n\n1. Cho thuê sảnh");
                         System.out.println("0. Thoát");
                         System.out.print("\nNhập sự lựa chọn: ");
-                        choose = Integer.parseInt(CauHinh.sc.nextLine()) ;
-                        switch(choose) {
+                        choose4 = Integer.parseInt(CauHinh.sc.nextLine()) ;
+                        switch(choose4) {
                             case 1: {
                                 Boolean thoat = false;
                                 do {
@@ -362,13 +361,13 @@ public class Demo {
                                 break;
                             }
                             case 0:
-                                choose = 0;
+                                choose4 = 0;
                                 break;
                             default:
                                 System.out.println("Không có lựa chọn này!");
                                 break;
                         }
-                    }while(choose != 0);
+                    }while(choose4 != 0);
                     break;
                 case 5: {
                     boolean thoat = false;
@@ -391,13 +390,16 @@ public class Demo {
                     break;
                 }
                 case 6: {
-                    boolean thoat = false;
-
+                    break;
+                }
+                case 7: {
+                    break;
                 }
                 case 0:
                     break;
                 default:
                     System.out.print("Lỗi.Vui lòng chọn lại!!!");
+                    break;
             }
         }while(choose != 0);
     }
